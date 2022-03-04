@@ -1,0 +1,19 @@
+vector<int> twoSum() {
+    
+    
+  vector<int> arr = {10, 5, 2, 3, -6, 9, 11};
+  int target = 4;  
+    unordered_set<int> uset;
+    vector<int> res;
+    for(int x:arr){
+        int comp = target - x;
+        if(uset.find(comp) != uset.end()){
+           // cout << x << " " << comp << endl;
+            res.push_back(comp, x);
+            return res;
+        }
+        uset.insert(x);
+    }
+    
+    return {1, 1};
+}
